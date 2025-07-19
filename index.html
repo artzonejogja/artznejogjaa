@@ -1,284 +1,362 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5YZ6KTK5FG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5YZ6KTK5FG');
-</script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ArtZone Jogja - T-Shirt Kustom</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ArtZoneJogja</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
-      background: #4d4b4b;
-      color: #3b3a3a;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
     }
 
     header {
-      text-align: center;
-      padding: 20px;
-      background-image: url('header.png');
-      background-size: cover;
-      background-position: center;
-      font-weight: bold;
-      color: rgb(232, 247, 255);
-    }
-
-    .logo {
-      height: 650px;
-    }
-
-    .text-logo {
-      height: 100px;
-    }
-
-    h1 {
-      margin: 20px 0 5px;
-    }
-
-    .main-section, .product-section, .quality-section, .custom-section, .testimonial-section {
-      padding: 30px 20px;
-      text-align: center;
+      background: url('https://i.pinimg.com/1200x/cf/6d/77/cf6d7731244c5716976c4b023c41db47.jpg') center/cover no-repeat;
       color: white;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 10px 20px;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
-    /* SLIDER */
-    .slider {
-      position: relative;
-      max-width: 300px;
+    header h1 {
+      margin-bottom: 5px;
+      font-size: 2.2rem;
+    }
+
+    nav {
+      background-color: #444;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      width: 100%;
+      height: 220px;
+      background: url('https://private-us-east-1.manuscdn.com/sessionFile/s33PBGUHSfFcjOoKdFNT7b/sandbox/1tiKh9esjr1so6J2Ckmx3C_1752888249467_na1fn_L2hvbWUvdWJ1bnR1L2hlYWRlcl9pbWFnZXMvTlFlbWRTdDNGWHo1.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvczMzUEJHVUhTZkZjak9vS2RGTlQ3Yi9zYW5kYm94LzF0aUtoOWVzanIxc282SjJDa214M0NfMTc1Mjg4ODI0OTQ2N19uYTFmbl9MMmh2YldVdmRXSjFiblIxTDJobFlXUmxjbDlwYldGblpYTXZUbEZsYldSVGRETkdXSG8xLmpwZyIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=rVe37EF-r5OEjzO2ANIMlLcNmx-0YH4BroIQbVierDeOT5~y0a4cZDys-rIHlkoIwdfpTE6vS2bfhZRaMur4eTGl8DeU005hdF4Kqw3DHz2sbHBATn5iwTR2ZChL2xr26Q8UMo1S2WESxCSR7n53HPcSKzNPpSzs4qsxNDacGk923PIROBYhsgqSlnvenBn1zzA1UO58rqFVT0nS2w0DWPp-r8eXYLivNNgSbeNamaE7CpmezwRZTEG7uphJDfijwCM3M8L4yIuNzu8vrHMkLZp0odeK3ug3l6V~HJp1W6LObuv-yxAbQN9M2FiKy-EYdaqby85yMha9W7vNuoXW9g__') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    }
+
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    /* Warna dan gaya judul produk */
+    #produk h2 {
+      color: #ff6600;
+      font-weight: 600;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: black;
+      padding: 10px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 250px;
       margin: 0 auto;
     }
 
-    .slide {
-      display: none;
-      width: 100%;
+    .card img {
+      width: 80%;
       border-radius: 10px;
+      object-fit: cover;
     }
 
-    .slide.active {
-      display: block;
+    .card h3 {
+      color: #007bff;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-top: 10px;
+      transition: color 0.3s ease;
     }
 
-    .product-list {
+    .card h3:hover {
+      color: #ff6600;
+      cursor: pointer;
+    }
+
+    .qualities {
       display: flex;
+      justify-content: space-around;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
+      margin-top: 20px;
     }
 
-    .product-card {
-      background: rgb(255, 255, 255);
-      padding: 15px;
-      width: 160px;
+    .quality {
+      width: 250px;
+      margin: 10px;
+    }
+
+    .testimonials {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .testimonial {
+      background: #fff;
+      padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 5px rgb(255, 255, 255);
+      width: 80%;
+      max-width: 500px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    .product-card img {
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    form input, form textarea {
       width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
       border-radius: 5px;
     }
 
-    .product-card p {
-      margin: 10px 0 5px;
-      font-weight: bold;
-      color: black;
-    }
-
-    button {
-      padding: 8px 12px;
-      border: none;
-      background: #333;
+    form button, form input[type="button"] {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #007bff;
       color: white;
+      border: none;
       border-radius: 5px;
       cursor: pointer;
     }
 
-    .quality-section {
-  padding: 30px 20px;
-  text-align: center;
-}
-
-.quality-section h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.quality-box {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.quality-box div {
-  max-width: 220px; /* sebelumnya 200px */
-}
-
-.quality-box img {
-  width: 120px;
-  margin-bottom: 10px;
-}
-
-.quality-box p {
-  font-size: 16px;
-}
-
-.quality-box strong {
-  font-size: 18px;
-}
-
-
-    .custom-tshirts {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 20px;
-      flex-wrap: wrap;
+    footer {
+      background: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 30px;
     }
 
-    .custom-tshirts img {
-      width: 100px;
-      border-radius: 5px;
-    }
+    @media (max-width: 600px) {
+      .qualities {
+        flex-direction: column;
+        align-items: center;
+      }
 
-    form {
-      max-width: 300px;
-      margin: 20px auto;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    input, textarea {
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
-    .testimonial-section .avatars {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin: 20px 0;
-    }
-
-    .avatars img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
+      .hero {
+        font-size: 1.5rem;
+        height: 250px;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="https://i.pinimg.com/1200x/9b/9a/91/9b9a910c4c3d10a28fd10790e28721f0.jpg" alt="Logo ArtZone Jogja" class="logo">
     <h1>ArtZoneJogja</h1>
-    <p><strong>SCREEN PRINTED T-SHIRTS</strong></p>
+    <p>Art in Every Thread</p>
   </header>
 
-  <!-- SLIDER -->
-  <section class="main-section">
-    <div class="slider">
-      <img src="https://i.pinimg.com/736x/f9/e6/1a/f9e61a3fcca257e2efcf12da3d74f145.jpg" alt="Model 1" class="slide active">
-      <img src="https://i.pinimg.com/736x/7d/c9/fc/7dc9fc8b8ce47aab8fe9d13adfb7ec9b.jpg" alt="Model 2" class="slide">
-      <img src="https://i.pinimg.com/736x/08/aa/89/08aa895c2332584a2f6ca781dce2a1d1.jpg" alt="Model 3" class="slide">
-      <img src="https://i.pinimg.com/736x/c7/60/f7/c760f7cd49f4ea4c2cb2a7cccace2ce7.jpg" alt="Model 4" class="slide">
-      <img src="https://i.pinimg.com/736x/3f/05/62/3f0562db6fe95c2e6cb51cadadd9a8db.jpg" alt="Model 5" class="slide">
-    </div>
-  </section>
+  <nav>
+    <a href="#produk">Produk</a>
+    <a href="#kualitas">Kualitas</a>
+    <a href="#testimoni">Testimoni</a>
+    <a href="#pesan">Pesan</a>
+  </nav>
 
-  <section class="product-section">
-    <div class="product-list">
-      <div class="product-card">
+  <div class="hero">
+    Koleksi Kaos Terbaru!
+  </div>
+
+  <section id="produk" class="section">
+    <h2>Produk Kami</h2>
+    <div class="products">
+      <div class="card">
         <img src="https://i.pinimg.com/736x/b3/af/b4/b3afb41bf7e957bf10dba8d7bddb869b.jpg" alt="RideRush">
-        <p>RideRush</p>
-        <button>BUY IT</button>
+        <h3>RideRush</h3>
       </div>
-      <div class="product-card">
-        <img src="https://i.pinimg.com/736x/20/f4/db/20f4db43b4bcefa5610f114e926f7642.jpg" alt="GyroGlide">
-        <p>GyroGlide</p>
-        <button>BUY IT</button>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/20/f4/db/20f4db43b4bcefa5610f114e926f7642.jpg" alt="Gyrocide">
+        <h3>Gyrocide</h3>
       </div>
-      <div class="product-card">
+      <div class="card">
         <img src="https://i.pinimg.com/736x/3b/03/5e/3b035e00fde5551f7154653042556f1d.jpg" alt="CycleWave">
-        <p>CycleWave</p>
-        <button>BUY IT</button>
+        <h3>CycleWave</h3>
+      </div>
+    </div>
+  </section>
+<style>
+  #kualitas {
+    background-color: black;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  #kualitas h2 {
+    color: #ff6600;
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .qualities {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .quality {
+    flex: 1 1 250px;
+    max-width: 300px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .quality:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .quality img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+  }
+
+  .quality h4 {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+
+  .quality p {
+    font-size: 0.95rem;
+    color: #333;
+  }
+</style>
+
+  <section id="kualitas" class="section">
+    <h2>Kualitas Terbaik</h2>
+    <div class="qualities">
+      <div class="quality">
+        <img src="https://img.icons8.com/color/96/t-shirt--v1.png
+" alt="Bahan Premium" />
+        <h4>Bahan Premium</h4>
+        <p>Kaos lembut dan nyaman digunakan.</p>
+      </div>
+      <div class="quality">
+        <img src="https://img.icons8.com/color/96/design--v1.png" alt="Bahan Premium" />
+        <h4>Desain Kreatif</h4>
+        <p>Visual unik dan kekinian.</p>
+      </div>
+      <div class="quality">
+        <img src="https://img.icons8.com/color/96/discount--v1.png" alt="Bahan Premium" />
+        <h4>Harga Terjangkau</h4>
+        <p>Murah tapi tidak murahan.</p>
       </div>
     </div>
   </section>
 
-  <section class="quality-section">
-    <h2>Best Quality</h2>
-    <div class="quality-box">
-      <div>
-        <img src="https://i.pinimg.com/736x/22/f1/49/22f149d441ff5bf10ee61ae0d8f5ae48.jpg" alt="Lasting Prints">
-        <p><strong>Lasting Prints</strong><br>Sablon tahan lama dan tajam</p>
-      </div>
-      <div>
-        <img src="https://i.pinimg.com/736x/25/6c/06/256c0645dda365182ca1052ea2bf6442.jpg" alt="Comfortable">
-        <p><strong>Comfortable</strong><br>Bahan lembut dan adem</p>
-      </div>
-      <div>
-        <img src="https://i.pinimg.com/736x/27/e1/2b/27e12bd04245691dab127f277f2925fd.jpg" alt="Accessories">
-        <p><strong>Accessories</strong><br>Praktis dan stylish</p>
-      </div>
-    </div>
-  </section>
+  <section id="testimoni" class="section" style="padding: 40px 20px; background-color: #f9f9f9;">
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 30px;">Apa Kata Pelanggan</h2>
 
-  <section class="custom-section">
-    <h2>Ekspresikan Gayamu Lewat Desain Sablon Kustom!</h2>
-    <p><strong>Soft</strong> - <strong>Awet</strong> - <strong>Desain Sesuai</strong></p>
-    <div class="custom-tshirts">
-        <img src="https://i.pinimg.com/736x/5d/62/08/5d6208a09dfbf892c2bd4826ad801cd3.jpg" alt="Retro & Y2K (Tahun 2000-an)">
-        <img src="https://i.pinimg.com/736x/55/16/bd/5516bd5c3c0bfe0a58a2df2786fe7e51.jpg" alt="Sarkas / Humor Gen Z">
-        <img src="https://i.pinimg.com/736x/5c/02/ae/5c02ae1e89f0068aa175f6adb99ad2f4.jpg" alt="Streetwear / Hypebeast">
+  <div class="testimonial-slider" style="position: relative; max-width: 600px; margin: auto; overflow: hidden;">
+    <div class="slides" style="display: flex; transition: transform 0.5s ease;">
+      
+      <!-- Testimoni 1 -->
+      <div class="testimonial" style="min-width: 100%; box-sizing: border-box; padding: 20px; background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; gap: 15px; align-items: flex-start;">
+        <img src="https://i.pinimg.com/736x/e0/f8/18/e0f8189d32a1b194ee218b834f7be472.jpg" alt="Rina" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #ddd;">
+        <div>
+          <p style="font-style: italic;">"Kaosnya nyaman banget dipakai dan sablonnya tahan lama!"</p>
+          <strong>- Rina, Jogja</strong>
+        </div>
+      </div>
+
+      <!-- Testimoni 2 -->
+      <div class="testimonial" style="min-width: 100%; box-sizing: border-box; padding: 20px; background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; gap: 15px; align-items: flex-start;">
+        <img src="https://i.pinimg.com/1200x/18/fa/4b/18fa4bfd45a69e419ce1bf8c51dbeeee.jpg" alt="Budi" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #ddd;">
+        <div>
+          <p style="font-style: italic;">"Desainnya keren, pengirimannya cepat. Recommended!"</p>
+          <strong>- Budi, Sleman</strong>
+        </div>
+      </div>
+
     </div>
-    </section>
-  <section class="testimonial-section">
-    <h2>Apa Kata Pelanggan</h2>
-    <div class="avatars">
-      <img src="https://i.pinimg.com/736x/03/eb/d6/03ebd625cc0b9d636256ecc44c0ea324.jpg" alt="Adimya">
-      <img src="https://i.pinimg.com/736x/d1/99/cd/d199cd2b9a639e340b2afa4690f6ac32.jpg" alt="Unna">
-      <img src="http://i.pinimg.com/736x/f9/71/2c/f9712c18a287d788fe72ed221dc00ad2.jpg" alt="Fona">
-    </div>
-    <form>
-      <input type="text" placeholder="Nama" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Pesan"></textarea>
-      <button type="submit">KIRIM</button>
+  </div>
+</section>
+
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelector('.slides');
+  const totalSlides = slides.children.length;
+
+  function showNextSlide() {
+    slideIndex = (slideIndex + 1) % totalSlides;
+    slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+  }
+
+  setInterval(showNextSlide, 3000); // Ganti slide setiap 3 detik
+</script>
+
+  <section id="pesan" class="section">
+    <h2>Buat Pesanan Anda</h2>
+    <form id="myForm">
+      <input type="text" placeholder="Nama Anda" required>
+      <input type="email" placeholder="Email Anda" required>
+      <textarea rows="5" placeholder="Pesan Anda" required></textarea>
+      <input type="button" onclick="myFunction(),alert('Pesanan berhasil diproses. Terima kasih!')" value="Kirim">
     </form>
   </section>
 
+  <footer>
+    <p>&copy; 2025 ArtZoneJogja. All Rights Reserved.</p>
+  </footer>
+
   <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === index) slide.classList.add('active');
-      });
+    function myFunction() {
+      document.getElementById("myForm").reset();
     }
-
-    function nextSlide() {
-      currentSlide = (currentSlide + 2) % slides.length;
-      showSlide(currentSlide);
-    }
-
-    setInterval(nextSlide, 3000);
   </script>
+
 </body>
 </html>
